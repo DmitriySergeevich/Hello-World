@@ -106,13 +106,13 @@ function addColumn(){
   $(newBody).addClass('column-body');
   $(newBody).css('height', '50px');
   $(newHeader).text('Новый столбец')
-  $(newColumn).append(newHeader, newBody,newFooter);
-  addEventColumn($(newColumn))
-  addEventHeaderColumn($(newHeader))
-  addEventFooterColumn($(newFooter))
+  $(newColumn).append(newHeader, newBody, newFooter);
   $(newColumn).insertBefore(this);
   $(newHeader).focus();
   $(newBody).append(addNote);
+  addEventColumn($(newColumn))
+  addEventHeaderColumn($(newHeader))
+  addEventFooterColumn($(newFooter))
 }
 /////////////////////////////////////////////
 function addEventNote(note){
