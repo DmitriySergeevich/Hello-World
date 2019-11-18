@@ -52,6 +52,8 @@ function dragendNote(event){
     $(dragNote).insertAfter(targetNote);
   }
 }
+
+
 /////////////////////////////////////////////
 function dragstartColumn(){
   dragColumn = this;
@@ -141,3 +143,11 @@ addEventHeaderColumn($('.column-header'))
 addEventFooterColumn($('.column-footer'))
 
 $('.addColumn').click(addColumn)
+
+
+
+$( ".note" ).draggable({
+  start: function( event, ui ) {
+    dragstartNote
+  }
+});
